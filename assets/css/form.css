@@ -1,0 +1,163 @@
+    .form-container {
+        position: absolute;
+        background-color: var(--neutral-color-base);
+        padding: 24px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        box-sizing: border-box;
+        overflow: hidden;
+        max-height: calc(100vh - 56px);
+        height: auto;
+    }
+
+
+    .form-container-body {
+        display: grid;
+        gap: 16px;
+        overflow: auto;
+        height: auto;
+        max-height: calc(100vh - 180px);
+    }
+
+    .form-container-body-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    fieldset legend {
+        padding-bottom: 16px;
+    }
+
+    .form-container-body-item--radio {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 16px;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        height: 42px;
+    }
+
+    .form-container-body-item--checkbox {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 16px;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        height: 42px;
+    }
+
+
+    .form-container-body-item--radio input {
+        width: 16px;
+        height: 16px;
+        margin-left: 24px;
+    }
+
+    .form-container-body-item--radio label {
+        border: 1px solid var(--primary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        right: 0;
+        bottom: 0;
+        border-radius: 8px;
+        padding-left: 48px;
+        line-height: 42px;
+    }
+
+    .form-container-body-item--checkbox input {
+        width: 16px;
+        height: 16px;
+        border: 1px solid var(--primary-color);
+    }
+
+    fieldset {
+        border: none !important;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    textarea {
+        outline: 1px solid var(--primary-color);
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        resize: none;
+    }
+
+    .form-container-body-item input {
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        height: 32px;
+        padding: 4px 8px;
+    }
+
+    .form-container-body-item input:focus {
+        outline: 1px solid var(--primary-color);
+    }
+
+    .form-container-body-item input[aria-invalid="true"]+.form-container-body-item-error {
+        visibility: visible;
+    }
+    fieldset:has(input[aria-invalid="true"]) .form-container-body-item-error {
+        visibility: visible;
+    }
+
+    .form-container-body-item textarea[aria-invalid="true"]+.form-container-body-item-error {
+        visibility: visible;
+    }
+
+    .form-container-body-item-error {
+        visibility: hidden;
+        color: var(--status-error);
+        font-size: 12px;
+    }
+
+    .form-container-footer button {
+        color: var(--neutral-color-base);
+        font-weight: 400;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 8px;
+        height: 48px;
+        width: 100%;
+    }
+
+    @media(max-width: 768px) {
+        .form-container {
+            width: calc(100% - 56px);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form-container-body {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .form-container {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form-container-body {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }

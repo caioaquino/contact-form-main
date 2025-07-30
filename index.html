@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/form.css" />
+
+  <script src="./methods.js" defer></script>
+
+</head>
+
+<body>
+  <main>
+    <div class="form-container">
+      <div class="form-container-header">
+        <h1>Contact us</h1>
+      </div>
+      <form class="form">
+
+        <section class="form-container-body">
+          <span class="form-container-body-item">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required autocomplete="first-name"
+              aria-describedby="first-name-error" aria-invalid="false" />
+            <p id="first-name-error" class="form-container-body-item-error">First name is required</p>
+          </span>
+
+          <span class="form-container-body-item">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required autocomplete="last-name"
+              aria-describedby="last-name-error" aria-invalid="false" />
+            <p id="last-name-error" class="form-container-body-item-error">Last name is required</p>
+          </span>
+
+          <span class="form-container-body-item">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error"
+              aria-invalid="false" />
+            <p id="email-error" class="form-container-body-item-error">E-mail is required</p>
+          </span>
+
+          <fieldset>
+            <legend>Query type *</legend>
+            <div class="form-container-body-item form-container-body-item--radio"> <label
+                for="query-type-general-enquiry" tabindex="0">General Enquiry</label>
+              <input type="radio" id="query-type-general-enquiry" name="query-type" value="0" aria-invalid="false"
+                aria-describedby="query-type-error" required tabindex="-1" />
+            </div>
+            <div class="form-container-body-item form-container-body-item--radio"> <label
+                for="query-type-support-request" tabindex="0">Support Request</label>
+              <input type="radio" id="query-type-support-request" name="query-type" value="1" aria-invalid="false"
+                aria-describedby="query-type-error" required tabindex="-1"/>
+            </div>
+
+            <p id="query-type-error" class="form-container-body-item-error">Query type is required</p>
+          </fieldset>
+
+          <span class="form-container-body-item">
+            <label for="message">Mensagem *</label>
+            <textarea id="message" name="message" required autocomplete="message" aria-describedby="message-error"
+              aria-invalid="false" rows="10"></textarea>
+            <p id="message-error" class="form-container-body-item-error">Message is required</p>
+          </span>
+
+          <span class="form-container-body-item form-container-body-item--checkbox">
+            <label for="terms-checklist">I consent to being contacted by the team</label>
+            <input type="checkbox" id="terms-checklist" name="terms-checklist" required autocomplete="terms-checklist"
+              checked="false" />
+          </span>
+
+          <div class="form-container-footer">
+            <button type="submit" id="submit-button">Submit</button>
+          </div>
+
+
+        </section>
+
+
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

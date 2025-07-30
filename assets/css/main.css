@@ -1,0 +1,45 @@
+:root {
+    --primary-color: hsl(169, 82%, 27%);
+    --primary-color-light: hsl(148, 38%, 91%);
+    --neutral-color-medium: hsl(186, 15%, 59%);
+    --neutral-color-high: hsl(187, 24%, 22%);
+    --neutral-color-base: hsl(0, 0%, 100%);
+    --status-error: hsl(0, 66%, 54%);
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('/assets/fonts/static/Karla-Regular.ttf') format('truetype');
+    font-weight: 400;
+    ;
+}
+
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./assets/fonts/static/Karla-Bold.ttf') format('truetype');
+    font-weight: 700;
+    ;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--primary-color-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+    color: var(--neutral-color-high);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
