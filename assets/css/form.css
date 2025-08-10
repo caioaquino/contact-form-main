@@ -19,6 +19,7 @@
         overflow: auto;
         height: auto;
         max-height: calc(100vh - 180px);
+        padding: 2px;
     }
 
     .form-container-body-item {
@@ -112,6 +113,7 @@
     .form-container-body-item input[aria-invalid="true"]+.form-container-body-item-error {
         visibility: visible;
     }
+
     fieldset:has(input[aria-invalid="true"]) .form-container-body-item-error {
         visibility: visible;
     }
@@ -125,6 +127,7 @@
         color: var(--status-error);
         font-size: 12px;
     }
+
 
     .form-container-footer button {
         color: var(--neutral-color-base);
@@ -155,9 +158,21 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 760px;
         }
 
         .form-container-body {
             grid-template-columns: repeat(2, 1fr);
         }
+
+        .form-container-body-item--fullwidth,
+        fieldset {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        
+    .form-container-footer {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
     }
